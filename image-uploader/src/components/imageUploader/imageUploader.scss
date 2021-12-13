@@ -1,0 +1,93 @@
+.image-uploader {
+  &.upload-status-init {
+    .image-uploader-init {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      .image-upload-block {
+        border-radius: 12px;
+        border: 1px dashed #97bef4;
+        background-color: #f6f8fb;
+        width: 338px;
+        height: 218.9px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        margin-top: 30px;
+        transition: background-color 0.3s ease-in-out;
+        &.active-on-drag {
+          background-color: #e7f0fc;
+        }
+      }
+      .image-upload-break {
+        margin-top: 16px;
+        margin-bottom: 21px;
+      }
+      .image-upload-input {
+        display: none;
+      }
+    }
+    .image-uploader-update,
+    .image-uploader-done {
+      display: none;
+    }
+  }
+  &.upload-status-update {
+    width: 30%;
+    .image-uploader-init,
+    .image-uploader-done {
+      display: none;
+    }
+    .image-uploader-update {
+      display: block;
+      padding: 16px 0px;
+      .progress-wrapper {
+        margin-top: 30px;
+      }
+    }
+  }
+  &.upload-status-done {
+    .image-uploader-init,
+    .image-uploader-update {
+      display: none;
+    }
+    .image-uploader-done {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      .image-uploader-title {
+        margin-top: 11px;
+      }
+      .image-uploaded-container {
+        border-radius: 12px;
+        overflow: hidden;
+        margin-top: 30px;
+      }
+      .image-uploaded-url {
+        border-radius: 12px;
+        overflow: hidden;
+        border: 1px solid #e0e0e0;
+        border-radius: 8px;
+        background-color: #f6f8fb;
+        margin-top: 26px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        padding: 2px;
+        input {
+          border: none;
+          flex: 1;
+          background-color: transparent;
+          height: 100%;
+          padding: 0px 8px;
+        }
+        button {
+          padding: 9px 20px;
+        }
+      }
+    }
+  }
+}

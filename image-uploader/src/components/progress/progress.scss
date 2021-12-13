@@ -1,0 +1,26 @@
+@import "../../theme/theme.scss";
+
+.progress-bar {
+  &.linear-progress-bar {
+    width: 100%;
+    .linear-progress-thumb {
+      background-color: rgba(242, 242, 242, 1);
+      overflow: hidden;
+      .linear-progress-value {
+        height: 6px;
+        width: 40%;
+        animation: linear-moving 2s cubic-bezier(.11,.83,.85,.23) forwards infinite;
+        background-color: $color-primary;
+      }
+    }
+  }
+}
+
+@keyframes linear-moving {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(300%);
+  }
+}
